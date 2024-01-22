@@ -8,15 +8,10 @@ using UglyToad.PdfPig;
 
 
 Console.WriteLine("Hello, Bot!");
-
-string azureOpenAIEndpoint = "https://innovations-shared-openai-endpoint.openai.azure.com/";
-string azureOpenAIEndpointKey = "73c77871c4e446d690bbbaae2787ad55";
-string deploymentNamegpt4 = "innovations-shared-gpt4";
-string deploymentNamegpt432k = "innovations-shared-gpt4-32k";
-string filename = @"..\..\..\..\Greenville,_South_Carolina.pdf";
+Shared s = new();
 
 StringBuilder text = new StringBuilder();
-using (PdfDocument document = PdfDocument.Open(filename)) {
+using (PdfDocument document = PdfDocument.Open(s.GetEnvironment("samplePDF"))) {
     foreach (Page page in document.GetPages()) {
         foreach (Word word in page.GetWords()) {
             text.Append(word.Text + " ");
@@ -25,8 +20,8 @@ using (PdfDocument document = PdfDocument.Open(filename)) {
 }
 
 OpenAIClient openAIClient = new OpenAIClient(
-    new Uri(azureOpenAIEndpoint),
-    new AzureKeyCredential(azureOpenAIEndpointKey)
+    new Uri(s.GetEnvironment("azureOpenAIEndpoint")),
+    new AzureKeyCredential(s.GetEnvironment("azureOpenAIEndpointKey"))
 );
 
 List<string> chunksList = new List<string>();
@@ -46,7 +41,7 @@ foreach (string chunk in chunksList) {
     chatCompletionsOptions.Temperature = 0.6f;
     //the bot can return multiple top responses here in one call
     //chatCompletionsOptions.ChoiceCount = 10;
-    chatCompletionsOptions.DeploymentName = deploymentNamegpt4;
+    chatCompletionsOptions.DeploymentName = s.GetEnvironment("deploymentNamegpt4");
     chatCompletionsOptions.Messages.Add(new ChatRequestSystemMessage(@"
 You are a helpful text analysis bot.  
 You will be supplied with a wikipedia article and a specific item or person to research.  

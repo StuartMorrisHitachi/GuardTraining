@@ -12,5 +12,7 @@
     <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.12" />
     <PackageReference Include="PdfPig" Version="0.1.9-alpha-20240117-096eb" />
   </ItemGroup>
-
+	<ItemGroup>
+		<ProjectReference Include="..\Shared\Shared.csproj" />
+	</ItemGroup>
 </Project>

@@ -13,4 +13,8 @@
     <PackageReference Include="PdfPig" Version="0.1.9-alpha-20240117-096eb" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.csproj" />
+  </ItemGroup>
+
 </Project>

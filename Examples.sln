@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example7-GPTSentimentAnalys
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example8-LanguageServiceSentimentAnalysis", "Example8-LanguageServiceSentimentAnalysis\Example8-LanguageServiceSentimentAnalysis.csproj", "{AB24808F-24E7-4934-85A6-9BE2485CAD1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{EDA918C4-A081-4312-A43F-23E3932C824B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{EDA918C4-A081-4312-A43F-23E3932C824B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example9-DocumentIntelligence", "Example9-DocumentIntelligence\Example9-DocumentIntelligence.csproj", "{277EED63-437C-43B1-8772-05AC7739A642}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example10-OutputMonitoring", "Example10-OutputMonitoring\Example10-OutputMonitoring.csproj", "{6DA80423-BC75-4177-8CEA-139F93310CF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{277EED63-437C-43B1-8772-05AC7739A642}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{277EED63-437C-43B1-8772-05AC7739A642}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{277EED63-437C-43B1-8772-05AC7739A642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DA80423-BC75-4177-8CEA-139F93310CF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DA80423-BC75-4177-8CEA-139F93310CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DA80423-BC75-4177-8CEA-139F93310CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DA80423-BC75-4177-8CEA-139F93310CF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
